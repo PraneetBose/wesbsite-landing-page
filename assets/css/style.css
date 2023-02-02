@@ -1,66 +1,69 @@
 /*Base*/
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html{
-    font-size:62.5%;
+html {
+    font-size: 62.5%;
 }
 
-body{
+body {
     font-size: 1.6rem;
     font-family: "Montserrat", sans-serif;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-img{
+img {
     max-width: 100%;
 }
+
 /*utilities*/
-.container{
-    max-width:125rem;
-    margin:0 auto;
+.container {
+    max-width: 125rem;
+    margin: 0 auto;
     padding: 0 1.5rem;
 }
 
-.hue-shift{
+.hue-shift {
     animation: hue-shift 5s infinite alternate;
 }
+
 /*Header*/
-header{
-    position:absolute;
+header {
+    position: absolute;
     top: 0;
     left: 0;
-    z-index:1000;
+    z-index: 1000;
     width: 100%;
 }
 
-.nav{
-    height:10rem; /*100px*/
-    display:flex;
-    align-items:flex-end;
+.nav {
+    height: 10rem;
+    /*100px*/
+    display: flex;
+    align-items: flex-end;
     justify-content: space-between;
 }
 
-.nav-list{
-    display:flex;
+.nav-list {
+    display: flex;
     list-style: none;
 }
 
-.nav-item{
-    margin-right:5rem;
+.nav-item {
+    margin-right: 5rem;
 }
 
-.nav-item:last-child{
+.nav-item:last-child {
     margin-right: 0;
 }
 
-.nav-link{
+.nav-link {
     font-size: 1.2rem;
     text-transform: uppercase;
     color: #fff;
@@ -68,93 +71,93 @@ header{
 }
 
 
-.nav-link:hover{
+.nav-link:hover {
     opacity: .6;
 }
 
-.logo{
+.logo {
     display: block;
     width: 8rem;
 }
 
 /*Main-content*/
-.landing-page{
+.landing-page {
     width: 100%;
     min-height: 100vh;
-    background-image: linear-gradient(to bottom right, #3B4679,#2B3153);
+    background-image: linear-gradient(to bottom right, #3B4679, #2B3153);
     position: relative;
     overflow: hidden;
-    display:flex;
-    align-items:center;
+    display: flex;
+    align-items: center;
     z-index: 1;
 }
 
-.landing-page::before{
-    content:"";
+.landing-page::before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: inherit;
     height: 100vh;
-    background-image: url("../Downloads/bg-pat.png");
+    background-image: url("../img/bg-pat.png");
     background-size: cover;
     opacity: .4;
     z-index: -1;
 }
 
-.content{
-    display:grid;
+.content {
+    display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
 }
 
-.content-details{
+.content-details {
     max-width: 80%;
 }
 
-.title{
-    font-size:6rem;
+.title {
+    font-size: 6rem;
     color: #fff;
     margin-bottom: 1rem;
 }
 
-.description{
-    color:#929FC5;
+.description {
+    color: #929FC5;
     margin-bottom: 2.5rem;
 }
 
-.search{
+.search {
     margin-bottom: 2.5rem;
 }
 
-.search input{
-    border:none;
+.search input {
+    border: none;
     border-radius: 5rem;
     padding: 2rem;
     outline: none;
 }
 
-.search-bar{
-    width:calc(100% - .5rem);
+.search-bar {
+    width: calc(100% - .5rem);
 }
 
-.search-btn{
+.search-btn {
     width: 10rem;
-    background-image: linear-gradient(to right , #FF83D5, #FFCCB0) ;
-    coloR:#fff;
-    cursor:pointer;
+    background-image: linear-gradient(to right, #FF83D5, #FFCCB0);
+    coloR: #fff;
+    cursor: pointer;
     margin-left: -10rem;
 }
 
-.search-btn:hover{
-    background-image: linear-gradient(to left , #FF83D5, #FFCCB0) ;
+.search-btn:hover {
+    background-image: linear-gradient(to left, #FF83D5, #FFCCB0);
 }
 
-.sm-list{
-    display:flex;
+.sm-list {
+    display: flex;
 }
 
-.sm-link{
+.sm-link {
     color: #929FC5;
     width: 3rem;
     height: 3rem;
@@ -164,165 +167,170 @@ header{
     margin-right: 2.5rem;
 }
 
-.sm-link i{
-    margin:auto;
+.sm-link i {
+    margin: auto;
 }
 
-.sm-link:hover{
+.sm-link:hover {
     background-image: linear-gradient(to right, #A971FF, #00F0FF);
     color: #fff;
 }
 
-.image-group{
+.image-group {
     text-align: center;
     position: relative;
 }
 
-.blob-large{
+.blob-large {
     animation: move-up 2s infinite alternate;
 }
 
-.blob-bean{
+.blob-bean {
     position: absolute;
     top: 2.5rem;
-    left:-1rem;
+    left: -1rem;
     z-index: 10;
     animation: move-down 2s infinite alternate;
 }
 
-.blob{
+.blob {
     position: absolute;
     z-index: -1;
 }
 
-.blob-1{
+.blob-1 {
     top: -11rem;
     left: 50%;
     transform: translateX(-50%);
 }
 
-.blob-2{
-    top:15rem;
-    left:-17rem;
+.blob-2 {
+    top: 15rem;
+    left: -17rem;
 }
 
-.blob-3{
+.blob-3 {
     right: 5rem;
-    bottom:-24rem;
+    bottom: -24rem;
 }
 
-.blob-4{
-    left:-21rem;
-    bottom:-17rem;
+.blob-4 {
+    left: -21rem;
+    bottom: -17rem;
 }
 
 /*Animation*/
 @keyframes move-up {
-    from{
+    from {
         transform: translateY(0);
     }
-    to{
+
+    to {
         transform: translateY(2rem);
     }
 }
 
 @keyframes move-down {
-    from{
+    from {
         transform: translateY(0);
     }
-    to{
+
+    to {
         transform: translateY(-2rem);
     }
 }
 
 @keyframes hue-shift {
-    from{
+    from {
         filter: hue-rotate(0);
     }
-    to{
+
+    to {
         filter: hue-rotate(360deg);
     }
 
 }
 
-/*Media queries*/ /*for table size devices*/
-@media screen and (max-width: 768px){
-    .nav{
+/*Media queries*/
+/*for table size devices*/
+@media screen and (max-width: 768px) {
+    .nav {
         align-items: center;
     }
 
-    .content{
+    .content {
         grid-template-columns: 1fr;
     }
 
-    .content-details{
+    .content-details {
         order: 1;
         max-width: 100%;
     }
 
-    .title{
+    .title {
         font-size: 3.5rem;
     }
 
-    .description{
+    .description {
         font-size: 1.4rem;
     }
 
-    .image-group{
+    .image-group {
         margin-top: 10rem;
     }
 
-    .blob-large{
+    .blob-large {
         width: 70%;
     }
 
-    .blob-bean{
+    .blob-bean {
         width: 30%;
         top: -1rem;
         left: 5rem;
     }
 
-    .blob-1{
+    .blob-1 {
         display: none;
     }
 
-    .blob-2{
+    .blob-2 {
         left: 30rem;
         bottom: -1rem;
         top: revert;
         width: 25%;
     }
 
-    .blob-3{
+    .blob-3 {
         right: -3rem;
         bottom: -25rem;
     }
 
-    .blob-4{
+    .blob-4 {
         display: none;
     }
 }
 
-/*Media queries*/ /*for phone size devices*/
-@media screen and (max-width: 700px){
-    .nav{
+/*Media queries*/
+/*for phone size devices*/
+@media screen and (max-width: 700px) {
+    .nav {
         flex-direction: column;
         height: 5rem;
     }
 
-    .logo-box{
+    .logo-box {
         margin: 2rem 0;
     }
 
-    .nav-item{
-        margin-right: 2.5rem ;
+    .nav-item {
+        margin-right: 2.5rem;
     }
 
-    .blob-2{
+    .blob-2 {
         display: none;
     }
 
-    .blob-3{
+    .blob-3 {
         width: 50%;
         bottom: -10rem;
     }
